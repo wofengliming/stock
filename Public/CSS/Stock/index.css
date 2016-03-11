@@ -1,0 +1,21 @@
+@charset "utf-8";
+*{
+	margin:0px;
+	padding: 0px;
+}
+body{
+	width: 1024px;
+}
+.table{
+	width: 1024px;
+}
+table th{
+	width: 10%;
+	background: #e0e6fc;
+}
+table td{
+	text-align: center;
+}
+.page{
+	text-align: center;
+}

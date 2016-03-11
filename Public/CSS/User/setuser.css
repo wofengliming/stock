@@ -1,0 +1,33 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	/*background-image: url('../../IMG/backg.jpg');*/
+}
+.setuser{
+	width: 1024px;
+	margin-top: 15%;
+}
+table{
+	/*color: #FFFFCC;*/
+	margin-left: 50%;
+	font-size: 40px;
+  
+}
+.setuser input{
+	width: 300px;
+	height: 40px;
+	font-size: 40px;
+}
+.submit{
+	/*float: right;*/
+	font-size: 30px;
+}
+.submit a{
+	color: #FFFFCC;
+}
+.submit input{
+	width: 200px;
+
+}

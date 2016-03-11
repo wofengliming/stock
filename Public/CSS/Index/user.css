@@ -1,0 +1,70 @@
+@charset "utf-8";
+*{
+	margin:0px;
+	padding: 0px;
+}
+body{
+	width: 100%;
+}
+.kuang{
+	width: 1024px;
+	float: left;
+	margin-left: 10%;
+	background: yellow;
+}
+.top{
+	border: 1px solid;
+	width: 1024px;
+	height: 19px;
+	background-image: url('../../IMG/dhbgcolor.png');
+	float: left;
+	color: #fff;
+}
+.top a{
+	color: yellow;
+	text-decoration: none;	
+}
+.top a:hover{
+	text-decoration: none;
+	color: #fff;
+};
+.aaa{
+	width: 400px;
+	height: 300px;
+	float: left;
+}
+.aaa a{
+	float: left;
+	margin-left: -85px;
+	margin-top: 80px;
+}
+.aaa img{
+	float: left;
+}
+
+.imagel{
+	width: 500px;
+	float: left;
+	margin-left: 296px;
+	margin-top: 30px;
+
+}
+.imagel textarea{
+	border: none;
+	background: none;
+	width: 600px;
+	height: 50px;
+	font-size: 19px;
+	overflow:hidden;	
+	float: left;
+}
+
+.name1{
+	width: 1024px;
+	float: left;
+	font-size: 30px;
+}
+.name1 center{
+	width: 100px;
+}
+

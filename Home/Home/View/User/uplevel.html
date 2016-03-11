@@ -1,0 +1,16 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title>会员列表</title> 
+</head>
+<body>
+	<form action="__URL__/uplevelup" method="POST">
+		<table>
+			<tr><th>用户名</th><th>用户级别</th><th>操作</th><th></th></tr>
+			<input type="hidden" value={[$name]} name="name" />
+			<tr><td>{[$name]}</td><td><input type="text" name="level"></input></td><td><input type="submit" value="确定"/></td></tr>
+	 	</table>
+ 	</form>
+</body>
+</html>

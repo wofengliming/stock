@@ -1,0 +1,92 @@
+    <link rel="stylesheet" type="text/css" href="__CSS__/Stock/index.css"/>
+    <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+    <!-- 全选JS -->
+    <script type="text/javascript">
+$(function(){
+    //选中全部
+    $('.selectAll').click(function(){
+    $('#dataList').find('tr').each(function(){
+      $(this).find(':checkbox').prop('checked',true);
+    });
+    });
+
+    //反选
+    $('.revSelectAll').click(function(){
+    $('#dataList').find('tr').each(function(){
+      if($(this).find(':checkbox').prop('checked')){
+        $(this).find(':checkbox').prop('checked',false);
+      }else{
+        $(this).find(':checkbox').prop('checked',true);
+      }
+    });
+    });
+
+    //全不选
+    $('.delSelectAll').click(function(){
+    $('#dataList').find('tr').each(function(){
+      $(this).find(':checkbox').prop('checked',false);
+    });
+    });
+  
+  //删除选中数据处理
+  $('#form').submit(function(){
+      if (!confirm("是否确认删除所选商品, 删除后不可恢复"))  { 
+          return false;
+      } 
+    var gid = '';
+    $(':checkbox').each(function(){
+      if($(this).prop('checked')){
+                var id = $(this).val();
+                   gid += id+','
+      }
+    });
+    gid = gid.substring(0,gid.length-1);
+    $('[name=gid]').val(gid);
+    return true;
+    });
+})
+</script>
+    <!-- 全选JS -->
+    <form action="__APP__/Home/stock/index" method="POST" >
+        <input type="text" placeholder="搜索模糊" name="num"></input><input type="submit" value="模糊搜索"/>      
+      </form>
+<div class="table" >
+<table id="dataList">
+    <tr>
+          <th>操作</th><th>物品编号</th><th>物品名称</th><th>物品价格</th><th>执行人员</th><th>执行时间</th><th>库存状态</th><th>出库入库</th>
+    </tr>
+
+    
+	<foreach name='stock' item='vo'>
+        <tr>
+          <td><input type="checkbox" name="gid" value="{[$vo.id]}" /></td><td>{[$vo.num]}</td> <td>{[$vo.goods]}</td>   <td>{[$vo.money]}</td>  <td>{[$vo.filename]}</td>   <td>{[$vo.time|date='m/d/ H:i:s',###]}</td>     
+          <td><if condition="$vo.stock eq 1">已入库<else/>已出库</if></td>     
+          <td><if condition="$vo.stock eq 1">
+            <a href='__URL__/modstock1?id={[$vo.id]}'>出库</a>
+            <else/><a href='__URL__/modstock2?id={[$vo.id]}'>入库</a></if>
+            <a href="__URL__/updata?id={[$vo.id]}">修改</a>
+            <a href="__URL__/delstock?id={[$vo.id]}">删除</a></td> 
+        </tr>
+        <tr>  <td colspan=6>  <hr/> </td></tr>
+    </foreach>
+</table>
+<!-- 全选 -->
+<td colspan="5"><a href="javascript:void(0)" class="selectAll" >全选</a> / <a href="javascript:void(0)" class="revSelectAll" >反选</a>  / <a href="javascript:void(0)" class="delSelectAll">全不选</a>
+</td>
+<!-- 全选 -->
+<!-- 提交删除ID -->
+<form action="__APP__/Home/stock/batchdel" id="form" method="post">
+          <input type="hidden" name="action" value="del" />
+          <input type="hidden" name="gid" value="" />
+          <input type="submit" value="删除选中数据" />
+</form>
+<!-- 提交删除ID -->
+<!-- 分页 -->
+                 <div class="page">
+                        <p>{[$show]}{[$count]}</p>
+                 </div>
+<!--分页  -->
+</div>
+
+</body>
+</html>

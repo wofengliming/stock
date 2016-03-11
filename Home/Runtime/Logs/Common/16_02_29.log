@@ -1,0 +1,18 @@
+[ 2016-02-29T16:22:05+08:00 ] 127.0.0.1 /index.php/assets/code/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001394s ]
+ERR: 无法加载模块:Assets
+
+[ 2016-02-29T16:24:55+08:00 ] 127.0.0.1 /index.php/assets/code/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001286s ]
+ERR: 无法加载模块:Assets
+
+[ 2016-02-29T17:57:53+08:00 ] 127.0.0.1 /index.php/assets/code/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001186s ]
+ERR: 无法加载模块:Assets
+

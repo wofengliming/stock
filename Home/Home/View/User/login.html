@@ -1,0 +1,30 @@
+<include file="head"/>
+	<body>
+		<div class="img1">
+			<img src="__IMG__/img1.png"/>
+		</div>
+	<div class="FORMDIV" align="center">
+		<form action="__APP__/Home/User/login_check" method="post"name="myform"/>
+			<table>
+				<tr>
+					<td>用户名:</td><td><input  type='text' name='name'class="text1"placeholder='用户名' /></td>
+				</tr>
+				<tr>
+					<td>密&nbsp&nbsp码:</td><td><input type='password' class='text1' name='psword'placeholder='密码'/></td>
+				</tr>
+				<tr>
+					<td>验证码:</td>
+					<td> <input type='text'id='code' name='code' class="text1"  placeholder='验证码'/></td>
+				</tr>
+				<tr><td></td><td><img src="__APP__/Home/Public/code" onclick='this.src=this.src+"?"+Math.random()'/></td></tr>
+				<tr>
+					<td colspan="2">
+						<a href="#"><img src="__IMG__/login.gif" onclick="sub()"></a>
+						<a href="__APP__/Home/User/setuser"><img src="__IMG__/add.gif"></a>
+					</td>					
+				</tr>
+			</table>         	
+	</form>	
+	</div>	
+	</body>
+</html>

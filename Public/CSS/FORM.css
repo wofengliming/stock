@@ -1,0 +1,50 @@
+@charset "utf-8";
+/*USer模块  使用的CSS*/
+*{
+	padding:0;
+	margin:0;
+	}
+body{
+	/*background-image: url('../IMG/Background.jpg');*/
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	}
+	/*img1*/
+.img1{
+	margin-left: 38%;
+	margin-top: 3%;
+}
+	/*提交表单*/
+.FORMDIV{
+	/*border:1px solid #999;*/
+    margin-left:40%;
+	margin-top:10px;
+	float:left;
+	}
+.text1{
+	font-size: 20px;
+}
+.FORMDIV .radio{
+	width: 30px;
+}
+.FORMDIV form table{
+		font-weight:bold;
+			color:#000;
+		}
+.FORMDIV .img2{
+	float: right;
+}
+.FORMDIV form input{
+	width: 150px;
+	size: 20;
+	height:30px;
+}
+#code{
+	/*width:85px;*/
+	float:left;
+}
+a img{
+	 float: left;
+ 	 border: none;
+ 	 margin-left: 70px;
+}

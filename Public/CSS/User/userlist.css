@@ -1,0 +1,10 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.table{
+	margin-left: 35%; 
+}
+table{
+	border: 1px solid red;
+}

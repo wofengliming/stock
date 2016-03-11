@@ -1,0 +1,19 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title>会员列表</title> 
+    <link rel="stylesheet" type="text/css" href="__CSS__/User/userlist.css">
+</head>
+<body>
+	<div class="table">
+	<table>
+		<tr><th>用户名</th><th>用户级别</th><th>操作</th><th></th></tr>
+		<foreach name='user' item='vo'>
+		<tr><td>{[$vo.name]}</td><td>{[$vo.level]}</td><td><a href='__URL__/uplevel?name={[$vo.name]}'>修改级别</a></td><td><a href='#'>修改密码</a></td><td><a href='#'>删除用户</a></tr>
+		</foreach>
+	 	</table>
+		<h1>{[$show]}</h1>
+	</div>
+</body>
+</html>

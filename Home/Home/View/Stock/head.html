@@ -1,0 +1,21 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title>库存管理</title> 
+    <link rel="stylesheet" type="text/css" href="__CSS__/Index/head.css"/>
+</head>
+<body>
+	<div class="head1">{[$arr1]}{[$arr2]}</div>
+	<div class="head2">
+		<ul>
+			<li><a href="__URL__/index">库存信息</a></li>
+			<li><a href="__URL__/stock">添加库存</a></li>
+			<li><a href="__URL__/index?stock=1">入库库存</a></li>
+			<li><a href="__URL__/index?stock=0">出库库存</a></li>		
+		</ul>
+		<form action="__URL__/index" method="POST" >
+				<input type="text" placeholder="搜索模糊" name="num"></input><input type="submit" value="模糊搜索"/>			
+			</form>	
+	</div>
+
